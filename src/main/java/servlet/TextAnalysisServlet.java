@@ -2,7 +2,6 @@ package servlet;
 
 import com.google.gson.JsonObject;
 import java.io.PrintWriter;
-import java.net.URL;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -27,6 +26,8 @@ public class TextAnalysisServlet extends HttpServlet {
     response.setContentType("application/json");
     response.setCharacterEncoding("UTF-8");
     String urlPath = request.getPathInfo();
+    logger.info("[POST] URL path: " + urlPath);
+    logger.info("[POST] URI path: " + request.getRequestURI());
 
     PrintWriter out = response.getWriter();
     // check if we have a URL!
@@ -47,7 +48,6 @@ public class TextAnalysisServlet extends HttpServlet {
       out.write(String.valueOf(jsonResp));
       out.flush();
     }
-
   }
 
   private boolean isUrlValid(String[] urlPath) {
