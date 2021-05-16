@@ -14,7 +14,6 @@ import org.apache.logging.log4j.Logger;
 public class TextAnalysisServlet extends HttpServlet {
 
   private static final Logger logger = LogManager.getLogger(TextAnalysisServlet.class.getName());
-  private static final String URL_PARAM = "textbody";
 
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -53,6 +52,6 @@ public class TextAnalysisServlet extends HttpServlet {
 
   private boolean isUrlValid(String[] urlPath) {
     int n = urlPath.length;
-    return n == 3 && urlPath[1].equals(URL_PARAM);
+    return n == 2;
   }
 }
