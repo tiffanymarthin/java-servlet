@@ -17,7 +17,14 @@ public class TextAnalysisServlet extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
 
+    response.setStatus(HttpServletResponse.SC_OK);
+    JsonObject jsonResp = new JsonObject();
+    jsonResp.addProperty("message", "[GET] received");
+    out.write(String.valueOf(jsonResp));
+    out.flush();
   }
 
   @Override

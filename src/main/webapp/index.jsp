@@ -1,5 +1,6 @@
 <html>
-<body>
-<h2>Hello World!</h2>
-</body>
+    <body>
+        <h2>Hello, there! Welcome to CS 6650 - Text Analysis</h2>
+        <h3><a href="/text_servlet/textbody/wordcount/">Count words</a></h3>
+    </body>
 </html>
