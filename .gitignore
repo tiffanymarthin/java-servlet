@@ -72,4 +72,7 @@ modules.xml
 # java compiled files
 *.class
 
+# DS Store
+*.DS_Store
+
 # End of https://www.gitignore.io/api/intellij+all
