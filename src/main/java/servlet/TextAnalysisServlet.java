@@ -33,8 +33,8 @@ public class TextAnalysisServlet extends HttpServlet {
     response.setContentType("application/json");
     response.setCharacterEncoding("UTF-8");
     String urlPath = request.getPathInfo();
-    logger.info("[POST] URL path: " + urlPath);
-    logger.info("[POST] URI path: " + request.getRequestURI());
+//    logger.info("[POST] URL path: " + urlPath);
+//    logger.info("[POST] URI path: " + request.getRequestURI());
 
     PrintWriter out = response.getWriter();
     // check if we have a URL!
@@ -50,9 +50,10 @@ public class TextAnalysisServlet extends HttpServlet {
       out.write("Parameters are not valid.");
     } else {
       response.setStatus(HttpServletResponse.SC_OK);
-      JsonObject jsonResp = new JsonObject();
-      jsonResp.addProperty("message", 0);
-      out.write(String.valueOf(jsonResp));
+//      JsonObject jsonResp = new JsonObject();
+//      jsonResp.addProperty("message", 0);
+//      out.write(String.valueOf(jsonResp));
+      out.write("message: 0");
       out.flush();
     }
   }
